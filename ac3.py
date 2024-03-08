@@ -59,23 +59,29 @@ def divisao(a, b):
     if b != 0:
         return a / b
     else:
-        return "Inválido"
+        return "Divisão por zero"
+
+def escolher_operacao(a, b, operacao):
+    if operacao == "+":
+        return soma(a, b)
+    elif operacao == "-":
+        return subtracao(a, b)
+    elif operacao == "*":
+        return multiplicacao(a, b)
+    elif operacao == "/":
+        return divisao(a, b)
+    else:
+        return "Operação inválida"
 
 def calculadora():
-    operacoes_validas = ["+", "-", "*","/"]
-    num1 = float(input("Digite o primeiro numero: "))
-    num2 = float(input("Digite o segundo numero: "))
-    operacao = input("Digite a operação: ")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    operacao = input("Escolha a operação: ").lower()
 
-    if operacao in operacoes_validas:
-        if operacao == "+":
-            resultado = soma(num1, num2)
-        elif operacao == "-":
-            resultado = subtracao(num1, num2)
-        elif operacao == "*":
-            resultado = multiplicacao(num1, num2)
-        elif operacao == "/":
-            resultado = divisao(num1, num2)
-        print(f"Resultado da {operacao}: {resultado}")
+    resultado = escolher_operacao(num1, num2, operacao)
+    if resultado != "Operação inválida":
+        print(f"Resultado da operação {operacao}: {resultado}")
     else:
         print("Operação inválida")
+
+calculadora()
