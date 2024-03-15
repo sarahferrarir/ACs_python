@@ -17,7 +17,7 @@ b = float( input("Informe o coeficiente b: ") )
 c = float( input("Informe o coeficiente c: ") )
 
 raizes = eq_seg_grau(a, b, c)
-print(f"As raizes da equação são: {raizes[0]} e {raizes[1]}")
+print(f"As raizes da equação são: ", (raizes[0]), "e", (raizes[1]))
 
 """
 Desenvolva duas funções em Python:
@@ -46,4 +46,4 @@ num_horas = float(input("Informe o número de horas trabalhadas no mês: "))
 
 
 salario_liquido = calcula_salario(valor_hora, num_horas, irpf=0.275)
-print(f"O seu salário líquido é: R${salario_liquido}")
+print(f"O seu salário líquido é: R$", (salario_liquido))
