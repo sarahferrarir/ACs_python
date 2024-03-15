@@ -16,7 +16,7 @@ def determina_tipo_triangulo(a, b, c):
         return "Não é um triângulo"
 
 tipo_triangulo = determina_tipo_triangulo(5, 5, 5)
-print(f"{tipo_triangulo}")
+print((tipo_triangulo))
 
 #Exercício 2: dia da semana
 """Desenvolva uma função dia_semana que recebe um número inteiro e retorna uma
@@ -35,7 +35,7 @@ num_dia = 5
 nome_dia = dia_semana(num_dia)
 
 if nome_dia:
-    print(f"{nome_dia}")
+    print((nome_dia))
 else:
     print("")
 
@@ -80,7 +80,7 @@ def calculadora():
 
     resultado = escolher_operacao(num1, num2, operacao)
     if resultado != "Operação inválida":
-        print(f"Resultado da operação {operacao}: {resultado}")
+        print(f"Resultado da operação ", (operacao), ":", (resultado))
     else:
         print("Operação inválida")
 
